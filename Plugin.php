@@ -19,7 +19,7 @@ class Plugin extends PluginBase
             'name'        => 'FileSearch',
             'description' => 'Suchformular',
             'author'      => 'KosmosKosmos',
-            'icon'        => 'icon-zoom'
+            'icon'        => 'icon-search'
         ];
     }
 
