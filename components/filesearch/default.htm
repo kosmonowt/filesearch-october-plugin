@@ -1,0 +1,40 @@
+<section class="course-finder">
+	<h1 class="section-heading text-highlight"><span class="line">{{"Ihre Suche nach"|_}} <strong>{{__SELF__.search()}}</strong></span></h1>
+
+	<div class="section-content">
+		{% if __SELF__.search() != false %}
+			{% for result in __SELF__.searchResult() %}
+			<div class="row">
+				<div class="col-md-12">
+					<a href="{{result.getUrl()}}"><strong>{{result.getTitle()}}</strong></a><br><i>{{result.getExcerpt()|raw}}</i><br>
+				</div>
+			</div>
+			{% endfor %}
+
+			{% if  not __SELF__.hasResult() %}
+			<div class="row">
+				<div class="col-md-12">
+					{{"Keine Ergebnisse."|_}}
+				</div>
+			</div>
+			{% else %}
+
+			{% endif %}
+			<br>
+			<form class="form-inline searchFormInline row">
+				<div class="col-xs-12">
+					<div class="input-group">
+						<span class="input-group-addon">{{"Neue Suche"|_}}</span>
+						<input class="form-control" value="{{__SELF__.search()}}" name="{{__SELF__.getGETName()}}">
+						<span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+					</div>
+				</div>
+
+			</form>
+			<br>
+		{% endif %}
+	</div><!--//section-content-->
+
+</section><!--//course-finder-->
+
+
