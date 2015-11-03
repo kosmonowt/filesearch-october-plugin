@@ -1,5 +1,9 @@
 <section class="course-finder">
-	<h1 class="section-heading text-highlight"><span class="line">{{"Ihre Suche nach"|_}} <strong>{{__SELF__.search()}}</strong></span></h1>
+	<h1 class="section-heading text-highlight">
+		<span class="line">{{"Search results for"|_}}
+			<strong>{{__SELF__.search()}}</strong>
+		</span>
+	</h1>
 
 	<div class="section-content">
 		{% if __SELF__.search() != false %}
@@ -14,7 +18,7 @@
 			{% if  not __SELF__.hasResult() %}
 			<div class="row">
 				<div class="col-md-12">
-					{{"Keine Ergebnisse."|_}}
+					{{"No result for your query."|_}}
 				</div>
 			</div>
 			{% else %}
@@ -24,7 +28,7 @@
 			<form class="form-inline searchFormInline row">
 				<div class="col-xs-12">
 					<div class="input-group">
-						<span class="input-group-addon">{{"Neue Suche"|_}}</span>
+						<span class="input-group-addon">{{"New search"|_}}</span>
 						<input class="form-control" value="{{__SELF__.search()}}" name="{{__SELF__.getGETName()}}">
 						<span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
 					</div>

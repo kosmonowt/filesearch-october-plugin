@@ -17,7 +17,7 @@ class Plugin extends PluginBase
     {
         return [
             'name'        => 'FileSearch',
-            'description' => 'Suchformular',
+            'description' => 'kosmoskosmos.filesearch::lang.plugin.description',
             'author'      => 'KosmosKosmos',
             'icon'        => 'icon-search'
         ];

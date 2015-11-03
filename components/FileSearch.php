@@ -16,7 +16,7 @@ class FileSearch extends ComponentBase
     {
         return [
             'name'        => 'FileSearch Component',
-            'description' => 'Suche nach Inhalten in Dateien'
+            'description' => 'kosmoskosmos.filesearch::lang.component.description',
         ];
     }
 
@@ -24,14 +24,14 @@ class FileSearch extends ComponentBase
     {
 	    return [
 			    "page" => [
-					    'title'         => "page Suchformular",
-					    'description'   => "redirect to search form",
-				        'default'       => "/suche.html",
+					    'title'         => 'kosmoskosmos.filesearch::lang.component.page.title',
+					    'description'   => 'kosmoskosmos.filesearch::lang.component.page.description',
+				        'default'       => "/search.html",
 					    'type'          => 'string'
 			    ],
 		        "name" => [
-			        "title"             => "GET Parameter",
-			        "description"       => "input field name-attribute",
+			        "title"             => 'kosmoskosmos.filesearch::lang.component.name.title',
+			        "description"       => 'kosmoskosmos.filesearch::lang.component.name.description',
 			        "default"           => "q",
 			        "type"              => "string"
 		        ]
