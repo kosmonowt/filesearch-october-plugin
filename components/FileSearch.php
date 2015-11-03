@@ -16,7 +16,7 @@ class FileSearch extends ComponentBase
     {
         return [
             'name'        => 'FileSearch Component',
-            'description' => 'kosmoskosmos.filesearch::lang.component.description',
+            'description' => 'kosmoskosmos.filesearch::lang.component_description',
         ];
     }
 
@@ -24,14 +24,14 @@ class FileSearch extends ComponentBase
     {
 	    return [
 			    "page" => [
-					    'title'         => 'kosmoskosmos.filesearch::lang.component.page.title',
-					    'description'   => 'kosmoskosmos.filesearch::lang.component.page.description',
+					    'title'         => 'kosmoskosmos.filesearch::lang.component_page_title',
+					    'description'   => 'kosmoskosmos.filesearch::lang.component_page_description',
 				        'default'       => "/search.html",
 					    'type'          => 'string'
 			    ],
 		        "name" => [
-			        "title"             => 'kosmoskosmos.filesearch::lang.component.name.title',
-			        "description"       => 'kosmoskosmos.filesearch::lang.component.name.description',
+			        "title"             => 'kosmoskosmos.filesearch::lang.component_name_title',
+			        "description"       => 'kosmoskosmos.filesearch::lang.component_name_description',
 			        "default"           => "q",
 			        "type"              => "string"
 		        ]
