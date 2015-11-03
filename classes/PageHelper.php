@@ -62,9 +62,7 @@ class PageHelper {
 	 */
 	public static function stripTwigTags($content) {
 
-		$replace = ['#{%\s(?!(component "editable"|content)).*%}#si'];
-		$content = preg_replace($replace,"",$content);
-		$replace = ['#({{)(.+?)(}})#si'];
+		$replace = ['#{%\s(?!(component "editable"|content)).*%}#si','#({{)(.+?)(}})#si'];
 		$content = preg_replace($replace,"",$content);
 		return $content;
 
