@@ -2,7 +2,7 @@
 
 use Cache;
 use Cms\Classes\Theme;
-use Cms\Classes\SectionParser;
+use October\Rain\Halcyon\Processors\SectionParser;//Cms\Classes\SectionParser;
 use League\Flysystem\Exception;
 use Symfony\Component\Finder\Finder as FileFinder;
 
@@ -153,11 +153,13 @@ class Finder {
 
 			foreach($finder as $file) {
 
-				$searchResult = new SearchResult($this->term,$file);
-				$contents = $searchResult->getContents();
+				if ($file) {
+					$searchResult = new SearchResult($this->term,$file);
+					$contents = $searchResult->getContents();
 
-				if ($this->hasTermInContent($contents,$term)) {
-					$files[] = $searchResult;
+					if ($this->hasTermInContent($contents,$term)) {
+						$files[] = $searchResult;
+					}
 				}
 
 			}
@@ -255,6 +257,7 @@ class Finder {
 			$cachedResult = json_decode(Cache::get("search_".$this->term));
 
 			foreach($cachedResult as $result) {
+				//dd($result);
 				$this->searchResult[] = new SearchResult($term,json_decode($result));
 			}
 

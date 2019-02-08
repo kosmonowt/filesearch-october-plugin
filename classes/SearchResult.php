@@ -1,7 +1,7 @@
 <?php namespace KosmosKosmos\FileSearch\Classes;
 
 use Cms\Classes\Page;
-use Cms\Classes\SectionParser;
+use October\Rain\Halcyon\Processors\SectionParser; //Cms\Classes\SectionParser;
 use League\Flysystem\Exception;
 use October\Rain\Support\Facades\Twig;
 use KosmosKosmos\FileSearch\Classes\PageHelper;
@@ -82,7 +82,7 @@ class SearchResult {
 
 		if (is_null($this->contents)) {
 
-			if (is_null($this->file)) throw new Exception("No file in Search result. Please initialize with a file!");
+			if (is_null($this->file)) return "";// throw new Exception("No file in Search result. Please initialize with a file!");
 
 			$this->contents = $this->file->getContents();
 
